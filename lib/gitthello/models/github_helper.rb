@@ -52,7 +52,7 @@ module Gitthello
                  :per_page => 100).
             sort_by { |a| a.number.to_i }
         end.each do |issue|
-          (if issue["labels"].any? { |a| a["name"] == "backlog" }
+          (if issue["labels"].any? { |a| a["name"] == "0 - Backlog" }
              @backlog_bucket
            else
              @issue_bucket
